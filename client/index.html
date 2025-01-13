@@ -8,6 +8,29 @@
   </head>
   <body>
     <div id="app"></div>
+
+
+
+    <div class="form">
+      <form id="input-form">
+          <label for="date">Date: </label>
+          <input type="date" name="date" required>
+          <label for="note">Leave a note: </label>
+          <input type="text" name="note">
+          <label for="exercise">Exercise: </label>
+          <input type="text" name="exercise" maxlength="255" required>
+          <label for="sets">Sets: </label>
+          <input type="number" name="sets" min="0">
+          <label for="reps">Reps: </label>
+          <input type="number" name="reps" min="0">
+          <label for="weight">Weight (kg) : </label>
+          <input type="number" name="weight" min="0">
+      </form>
+    </div>    
     <script type="module" src="/src/main.js"></script>
+
+
   </body>
 </html>
+
+
