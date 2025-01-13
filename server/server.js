@@ -1,13 +1,11 @@
-// import packages
-import pg from 'pg';
-import dotenv from 'dotenv';
-// start or configure packages
-dotenv.config();
-// tell server to use JSON
-// set up a port for the server by listening... 
-// setup database pool
-// create a root route
-// ========================
+import express from "express";
+import cors from "cors";
+import pg from "pg";
+import dotenv from "dotenv";
 
-// Route needed to READ data from database
-// Route needed to CREATE data in the database
+dotenv.config();
+
+const dbConnectionString = process.env.DATABASE_URL;
+
+export const db = new pg.Pool({
+    connectionString: dbConnectionString,});
