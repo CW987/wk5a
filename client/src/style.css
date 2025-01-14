@@ -6,17 +6,18 @@
 } 
 
 .form {
-    background-color:#EB5A3C;
+    background-color:#DF9755;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content:space-evenly;
     flex-wrap: wrap;
     padding: 5px;
+    height: 15rem;
 }
 
 input {
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 textarea {
@@ -29,26 +30,37 @@ label {
 }
 
 header {
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: rubik;
+    background-color: #EB5A3C;
+    color: #EDF4C2;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #040404;
+    paint-order: stroke;
 }
 
  #message {
-    background-color:palevioletred;
-    height: 420px;
+    background-color:#E7D283;
+    height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    
+    font-family: rubik;
+    color: #EB5A3C;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #040404;
+    paint-order: stroke;
 }
 
 button:hover {
-    background-color:darkgoldenrod;
-    border-color: black;
+    background-color:#E7D283;
+    border-color:white;
+    color: white;
 }
 
 

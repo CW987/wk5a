@@ -10,10 +10,9 @@
   </head>
   <body>
   <header>
-    <h1>Title</h1>
-
+    <h1>Raise the Bar: a workout tracker</h1>
   </header>
-  <br>
+
     <div class="container">
     <div class="form">
       <form class="input-form">
@@ -21,7 +20,7 @@
           <input type="date" name="date" required>
           <br>
           <label for="note">Leave a note: </label><br>
-          <textarea id="comment" name="comment"  rows="4" required></textarea>
+          <textarea id="comment" name="comment"  rows="4" required placeholder="EG: How is your mood? How do you feel physically."></textarea>
           <br>
           <label for="exercise">Exercise: </label>
           <input type="text" name="exercise" maxlength="255" required>
@@ -36,12 +35,12 @@
           <input type="number" name="weight" min="0">
           <br>
 
-          <button type="submit" style="font-family: rubik; font-size: 15px; border-radius: 10px; width: 80px;">Submit</button>
+          <button type="submit" style="font-family: rubik; font-size: 15px; border-radius: 10px; width: 80px; background-color:#EB5A3C;">Submit</button>
       </form>
     </div>    
     </div>
 
-    <div class="results-container">
+    <div id="message">
       <h2>Results</h2>
 
 
