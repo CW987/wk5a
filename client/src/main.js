@@ -57,7 +57,7 @@ async function messages() {
           var dd = date2.getDate();
           var yyyy = date2.getFullYear();
           var mm = date2.getMonth()+1
-          console.log(dd + "/"+mm + "/"+ yyyy)
+         // console.log(dd + "/"+mm + "/"+ yyyy)
           const date3 = dd + "/"+mm+"/"+yyyy
           date.textContent = date3;
           MessageContainer.appendChild(date);
@@ -69,23 +69,23 @@ async function messages() {
           MessageContainer.appendChild(MessageText);
 
           const myexercise = document.createElement("p");
-          myexercise.textContent = `${MessageBox[0][i].exercise}`;
+          myexercise.textContent = `Exercise: ${MessageBox[0][i].exercise}`;
           myexercise.className = "exercise";
           MessageContainer.appendChild(myexercise);
 
           const mysets = document.createElement("p");
-          mysets.textContent = `${MessageBox[0][i].sets}`;
-          mysets.className = "exercise";
+          mysets.textContent = `Sets: ${MessageBox[0][i].sets}`;
+          mysets.className = "sets";
           MessageContainer.appendChild(mysets);
 
           const myreps = document.createElement("p");
-          myreps.textContent = `${MessageBox[0][i].reps}`;
-          myreps.className = "exercise";
+          myreps.textContent = `Reps: ${MessageBox[0][i].reps}`;
+          myreps.className = "reps";
           MessageContainer.appendChild(myreps);
 
           const myweight = document.createElement("p");
-          myweight.textContent = `${MessageBox[0][i].weight}`;
-          myweight.className = "exercise";
+          myweight.textContent = `Weight: ${MessageBox[0][i].weight}`;
+          myweight.className = "weight";
           MessageContainer.appendChild(myweight);
     
           
