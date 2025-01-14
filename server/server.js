@@ -21,3 +21,19 @@ app.get("/", (req, res) =>{
     res.json({message: "This is the root route"})
 });
 
+app.get("/comments", async (req, res) => {
+    const query = await db.query(`SELECT * FROM workout_diary`);
+    await res.json(query.rows);
+});
+
+app.post("/new-data", async(req, res) =>{
+    console.log("Request body:", req.body);
+    const data = req.body;
+    const query = await db.query(`
+        INSERT INTO workout_diary (date, my_note, exercise, sets, reps, weight) 
+        VALUES($1, $2, $3, $4, $5, $6)`, 
+        [data.formValues.date, data.formValues.note, data.formValues.exercise, data.formValues.sets, data.formValues.reps, data.formValues.weight]); 
+    await res.json({
+        message: "The data was added successfully", 
+        data: query.rows})
+});
