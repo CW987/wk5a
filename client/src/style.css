@@ -18,10 +18,12 @@
 
 input {
     border-radius: 10px;
+    background-color: #E7D283;
 }
 
 textarea {
     border-radius: 5px;
+    background-color: #E7D283;
 }
 
 label {
