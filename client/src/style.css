@@ -66,6 +66,14 @@ h1 {
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+#message1 {
+    background-color:#e98009;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 button:hover {
     background-color:#E7D283;
