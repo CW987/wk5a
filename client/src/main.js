@@ -23,7 +23,7 @@ function handleSubmitMessageForm(event) {
   console.log(formValues);
   setTimeout(workoutdiary.onsubmit = function(){
    alert("Message submitted!")
-    //location.reload(true);
+    location.reload(true);
 })
 
 }
