@@ -88,10 +88,9 @@ async function messages() {
           MessageContainer.appendChild(myweight);
 
           const deleteComment = document.createElement("button");
-          deleteComment.textContent = `Delete ${MessageBox[0][i]}`
+          deleteComment.textContent = `Delete comment`
           deleteComment.className = "deleteComment"
           MessageContainer.appendChild(deleteComment)
-
 
           Messageshop.appendChild(MessageContainer);
     
@@ -102,4 +101,12 @@ async function messages() {
     }
     
     messages();
-    
+
+
+  const deleteComment = document.getElementsByClassName("deleteComment");
+  deleteComment.addEventListener("click", handleDelete (),{
+  },
+function handleDelete (){
+    deleteComment.removeChild(MessageContainer)  
+
+  })
