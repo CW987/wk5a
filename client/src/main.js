@@ -87,6 +87,12 @@ async function messages() {
           myweight.className = "weight";
           MessageContainer.appendChild(myweight);
 
+          const deleteComment = document.createElement("button");
+          deleteComment.textContent = `Delete ${MessageBox[0][i]}`
+          deleteComment.className = "deleteComment"
+          MessageContainer.appendChild(deleteComment)
+
+
           Messageshop.appendChild(MessageContainer);
     
           
@@ -97,5 +103,3 @@ async function messages() {
     
     messages();
     
-
-
