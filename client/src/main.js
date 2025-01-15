@@ -1,4 +1,4 @@
-const workoutdiary = document.querySelector("#input-form");
+const workoutdiary = document.querySelector(".input-form");
 
 
 function handleSubmitMessageForm(event) {
@@ -24,8 +24,7 @@ function handleSubmitMessageForm(event) {
   setTimeout(workoutdiary.onsubmit = function(){
    alert("Message submitted!")
     //location.reload(true);
-}
-, 3000)
+})
 
 }
 workoutdiary.addEventListener("submit", handleSubmitMessageForm);
@@ -46,7 +45,7 @@ async function messages() {
     
           const MessageContainer = document.createElement("div");
           MessageContainer.className = "message-container";
-          Messageshop.appendChild(MessageContainer);
+          
     
           const date = document.createElement("h4");
          const date1 = new Date(`${MessageBox[0][i].date}`)
@@ -87,6 +86,8 @@ async function messages() {
           myweight.textContent = `Weight: ${MessageBox[0][i].weight}`;
           myweight.className = "weight";
           MessageContainer.appendChild(myweight);
+
+          Messageshop.appendChild(MessageContainer);
     
           
     }
