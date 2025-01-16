@@ -37,3 +37,17 @@ app.post("/new-data", async(req, res) =>{
         message: "The data was added successfully", 
         data: query.rows})
 });
+
+app.delete("/delete-data/:id", async(req, res) =>{
+    const id = req.params.id;
+    const query = await db.query(`DELETE FROM workout_diary WHERE ID = $1`, [id])
+    if (query.rowCount > 0) { //When you execute a DELETE query, rowCount indicates how many rows were successfully deleted from the database.
+        res.json({
+            message: "The row was successfully deleted",
+        })
+    } else {
+        res.json({
+            message: "The row was not found",
+        })
+    }
+});

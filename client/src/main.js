@@ -45,6 +45,7 @@ async function messages() {
     
           const MessageContainer = document.createElement("div");
           MessageContainer.className = "message-container";
+          MessageContainer.setAttribute("data-id", MessageBox[0][i].id);
           
     
           const date = document.createElement("h4");
@@ -87,9 +88,13 @@ async function messages() {
           myweight.className = "weight";
           MessageContainer.appendChild(myweight);
 
+
+          const deleteButton = document.createElement("button");
+          deleteButton.textContent = `Delete comment`
+          deleteButton.className = "deleteButton"
+          MessageContainer.appendChild(deleteButton)
+
           Messageshop.appendChild(MessageContainer);
-    
-          
     }
       }
       MessagesDetail();
@@ -97,6 +102,25 @@ async function messages() {
     
     messages();
 
+
+const messasgeID = document.getElementById("message");
+messasgeID.addEventListener("click", function (e){
+  console.log(e.target.classList)
+  if (e.target.classList.contains("deleteButton")){
+    const messageContainer = e.target.closest(".message-container"); // Find the parent div of the comment
+    const dataId = messageContainer.getAttribute("data-id"); // Get the comment ID
+
+    const response = fetch(`http://localhost:8080/delete-data${dataId}`, { //the client is trying to send a DELETE request to the /delete-data route on the backend server 
+      method: "DELETE"
+    });
+    if (response.ok){
+      messageContainer.remove();
+      alert("Comment deleted successfully");
+    } else {
+      alert("Error: Comment unable to be deleted")
+    }
+  }
+})
 
 
     const filtremessagebutton = document.getElementById("list")
@@ -180,6 +204,8 @@ async function messages() {
               myweight.textContent = `Weight: ${filtre[0][i].weight}`;
               myweight.className = "weight";
               MessageContainer.appendChild(myweight);
+
+              
         
             
           }
@@ -196,5 +222,6 @@ async function messages() {
 
       filtremessagebutton.addEventListener("click",filtremessages);
       filtremessagebutton.addEventListener("click",clear);
+
 
 
