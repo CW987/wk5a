@@ -33,7 +33,8 @@ As a developer, I want to create and seed a database with dummy data so that I h
 
 Wireframe:
 
-![task management](/TWireframe.jpg "Our Trello steps")
+![task management](/Wireframe.jpg "Our Trello steps")
+
 Trello:
 
 ![task management](/Trello.jpg "Our Trello steps")
