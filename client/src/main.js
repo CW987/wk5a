@@ -9,7 +9,7 @@ function handleSubmitMessageForm(event) {
 
 
   
-  fetch("http://localhost:8080/new-data", {
+  fetch("https://wk5a.onrender.com/new-data", {
    
     method: "POST",
    
@@ -34,7 +34,7 @@ let MessageBox = [];
 
 async function messages() {
     const response = await fetch(
-        "http://localhost:8080/comments"
+        "https://wk5a.onrender.com/comments"
       );
       const data = await response.json();
       MessageBox.push(data);
@@ -105,7 +105,7 @@ async function messages() {
     
     async function filtremessages() {
         const response = await fetch(
-            "http://localhost:8080/comments"
+            "https://wk5a.onrender.com/comments"
           );
           const data = await response.json();
           filtre.push(data);
