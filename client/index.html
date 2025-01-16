@@ -15,7 +15,7 @@
 
     <div class="container">
     <div class="form">
-      <form class="input-form">
+      <form id="input-form">
           <label for="date">Date: </label> 
           <input type="date" name="date" required>
           <br>
@@ -37,18 +37,23 @@
 
 
           <button type="submit" style="font-family: rubik; font-size: 15px; border-radius: 10px; width: 80px; background-color:#EB5A3C;">Submit</button>
-          <input type="date" name="filterdate" id="filterdate">
-          <button type="submit" id = "list" style="font-family: rubik; font-size: 15px; border-radius: 10px; width: 80px; background-color:#EB5A3C;">List Button</button>
+        
 
 
       </form>
+      
+        <input type="date" name="filterdate" id="filterdate">
+        <button type="submit" id = "list" style="font-family: rubik; font-size: 15px; border-radius: 10px; width: 80px; background-color:#EB5A3C;">Show</button>
+    
     </div>    
+    
 
     <div class="results-container">
       <h2>Results</h2>
+    
     </div>
 
-    <div id="message">
+   <div id="message">
       <div id="message1"></div> 
 
 

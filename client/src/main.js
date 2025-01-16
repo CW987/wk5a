@@ -1,4 +1,4 @@
-const workoutdiary = document.querySelector(".input-form");
+const workoutdiary = document.querySelector("#input-form");
 
 
 function handleSubmitMessageForm(event) {
@@ -38,7 +38,7 @@ async function messages() {
       );
       const data = await response.json();
       MessageBox.push(data);
-      console.log(MessageBox);
+      //console.log(MessageBox);
       async function MessagesDetail() {
        for (let i = 0; i < MessageBox[0].length; i++) {
           //console.log(i);
@@ -50,7 +50,7 @@ async function messages() {
           const date = document.createElement("h4");
          const date1 = new Date(`${MessageBox[0][i].date}`)
          const dateStr = date1.toLocaleString('en-US', {
-            timeZone: 'America/New_York'
+            timeZone: "Europe/London"
           })
           const date2 = new Date (dateStr)
           var dd = date2.getDate();
@@ -96,8 +96,10 @@ async function messages() {
     }
     
     messages();
-    
-    const filtremessagebutton = document.getElementById("list");
+
+
+
+    const filtremessagebutton = document.getElementById("list")
     const filtrebox = document.getElementById("message1");
     let filtre = [];
     
@@ -107,16 +109,15 @@ async function messages() {
           );
           const data = await response.json();
           filtre.push(data);
+     //     console.log(filtre);
 
         
           async function MessagesDetailfiltre() {
            for (let i = 0; i < filtre[0].length; i++) {
-           const id = `${filtre[0][i].id}`;
-           console.log(id);
           
            const date1 = new Date(`${filtre[0][i].date}`)
            const dateStr = date1.toLocaleString('en-US', {
-              timeZone: 'America/New_York'
+              timeZone: "Europe/London"
             })
             const date2 = new Date (dateStr)
             var dd = date2.getDate();
@@ -124,11 +125,6 @@ async function messages() {
             var mm = date2.getMonth()+1
            // console.log(dd + "/"+mm + "/"+ yyyy)
             const date3 = yyyy + "-"+mm+"-"+dd
-
-           
-
-
- 
 
            var t;
            t = document.getElementById("filterdate").value; 
@@ -147,9 +143,9 @@ async function messages() {
               filtrebox.appendChild(MessageContainer);
 
               const date = document.createElement("h4");
-              const date1 = new Date(`${MessageBox[0][i].date}`)
+              const date1 = new Date(`${filtre[0][i].date}`)
               const dateStr = date1.toLocaleString('en-US', {
-                 timeZone: 'America/New_York'
+                  timeZone: "Europe/London"
                })
                const date2 = new Date (dateStr)
                var dd = date2.getDate();
@@ -166,28 +162,27 @@ async function messages() {
               MessageContainer.appendChild(FiltreText);
 
               const myexercise = document.createElement("p");
-              myexercise.textContent = `Exercise: ${MessageBox[0][i].exercise}`;
+              myexercise.textContent = `Exercise: ${filtre[0][i].exercise}`;
               myexercise.className = "exercise";
               MessageContainer.appendChild(myexercise);
     
               const mysets = document.createElement("p");
-              mysets.textContent = `Sets: ${MessageBox[0][i].sets}`;
+              mysets.textContent = `Sets: ${filtre[0][i].sets}`;
               mysets.className = "sets";
               MessageContainer.appendChild(mysets);
     
               const myreps = document.createElement("p");
-              myreps.textContent = `Reps: ${MessageBox[0][i].reps}`;
+              myreps.textContent = `Reps: ${filtre[0][i].reps}`;
               myreps.className = "reps";
               MessageContainer.appendChild(myreps);
     
               const myweight = document.createElement("p");
-              myweight.textContent = `Weight: ${MessageBox[0][i].weight}`;
+              myweight.textContent = `Weight: ${filtre[0][i].weight}`;
               myweight.className = "weight";
               MessageContainer.appendChild(myweight);
         
             
           }
-           
         }
         
         
@@ -201,4 +196,5 @@ async function messages() {
 
       filtremessagebutton.addEventListener("click",filtremessages);
       filtremessagebutton.addEventListener("click",clear);
+
 
