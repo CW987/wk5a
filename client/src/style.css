@@ -44,7 +44,7 @@ label {
 header {
     height: 60px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     font-family: rubik;
@@ -53,13 +53,21 @@ header {
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: #040404;
     paint-order: stroke;
+    padding: auto;
 }
+/* 
 h1 {
-    background-color: #EB5A3C;
+    background-color: transparent;
+    text-align: center;    
 }
 
+h4 {
+    background-color: transparent;
+    text-align: center;
+} */
+
 #input-form{
-    background-color:#DF9755;
+    background-color: transparent;
 }
 
 #message {
