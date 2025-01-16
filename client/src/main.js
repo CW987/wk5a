@@ -110,7 +110,7 @@ messasgeID.addEventListener("click", function (e){
     const messageContainer = e.target.closest(".message-container"); // Find the parent div of the comment
     const dataId = messageContainer.getAttribute("data-id"); // Get the comment ID
 
-    const response = fetch(`http://localhost:8080/delete-data${dataId}`, { //the client is trying to send a DELETE request to the /delete-data route on the backend server 
+    const response = fetch(`http://localhost:8080/delete-data/${dataId}`, { //the client is trying to send a DELETE request to the /delete-data route on the backend server 
       method: "DELETE"
     });
     if (response.ok){
