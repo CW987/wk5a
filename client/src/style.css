@@ -6,6 +6,10 @@
 
 } 
 
+.container {
+    
+}
+
 
 .form {
     background-color:#DF9755;
@@ -54,8 +58,8 @@ h1 {
     background-color: #EB5A3C;
 }
 
-.input-form{
-    background-color: #DF9755;
+#input-form{
+    background-color:#DF9755;
 }
 
 #message {
