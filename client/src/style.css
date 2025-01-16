@@ -55,16 +55,16 @@ header {
     paint-order: stroke;
     padding: auto;
 }
-
+/* 
 h1 {
     background-color: transparent;
-    text-align: center;
+    text-align: center;    
 }
 
 h4 {
     background-color: transparent;
     text-align: center;
-}
+} */
 
 #input-form{
     background-color: transparent;
