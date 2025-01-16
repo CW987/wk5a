@@ -12,12 +12,12 @@
   <body>
   <header>
     <h1>Raise the Bar</h1>
-    <h2>A workout tracker</h2>
+    <h4>a workout tracker</h4>
   </header>
 
     <div class="container">
     <div class="form">
-      <form class="input-form">
+      <form id="input-form">
           <label for="date">Date: </label> 
           <input type="date" name="date" required>
           <br>
@@ -34,21 +34,29 @@
           <input type="number" name="reps" min="0" required>
           <br>
           <label for="weight">Weight (kg) : </label>
-          <input type="number" name="weight" min="0" required placeholder="If no weight used, set to 0">
+          <input type="number" name="weight" min="0" required>
           <br>
 
 
           <button type="submit" style="font-family: rubik; font-size: 15px; border-radius: 10px; width: 80px; background-color:#EB5A3C;">Submit</button>
+        
+
 
       </form>
+      
+        <input type="date" name="filterdate" id="filterdate">
+        <button type="submit" id = "list" style="font-family: rubik; font-size: 15px; border-radius: 10px; width: 80px; background-color:#EB5A3C;">Show</button>
+    
     </div>    
+    
 
     <div class="results-container">
       <h2>Results</h2>
+    
     </div>
 
-    <div id="message">
-      
+   <div id="message">
+      <div id="message1"></div> 
 
 
 
