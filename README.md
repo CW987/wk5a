@@ -27,7 +27,6 @@ As a developer I would like to deploy my application so that users can access it
 As a developer, I want to create and seed a database with dummy data so that I have realistic test data for development purposes.
 
 
-
 Wireframe:
 
 ![task management](/Wireframe.jpg "Our Trello steps")
