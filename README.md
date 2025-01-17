@@ -63,7 +63,7 @@ If you want to filter the information  by a specific date, use the second date s
 
 Lighthouse report:
 
-![LightHouse](/lighthousereport.jpg "Our Light House Report")
+![LightHouse](/lighthouse.jpg "Our Light House Report")
 
 
 Reflections:
