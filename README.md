@@ -26,6 +26,7 @@ As a developer I would like to deploy my application so that users can access it
  As a developer, I want to create a working API POST route so that users can send data to the server and store it.
 As a developer, I want to create and seed a database with dummy data so that I have realistic test data for development purposes.
 
+
 Wireframe:
 
 ![task management](/Wireframe.jpg "Our Trello steps")
@@ -33,7 +34,6 @@ Wireframe:
 Trello:
 
 ![task management](/Trello.jpg "Our Trello steps")
-
 
 
 Database:
@@ -63,7 +63,7 @@ If you want to filter the information  by a specific date, use the second date s
 
 Lighthouse report:
 
-![LightHouse](/lighthouse.jpg "Our Light House Report")
+![LightHouse](/lighthousereport.jpg "Our Light House Report")
 
 
 Reflections:
